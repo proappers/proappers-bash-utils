@@ -1,0 +1,23 @@
+#
+## bash functions collection
+#
+
+
+# find in files names
+
+function h2find {
+	find . -iname "*$1*" -type f
+}
+
+
+# find in directories names
+
+function h2dfind {
+	find .  -iname "*$1*" -type d
+}
+
+# TODO: problems with escaping the *, try set -f or GLOBIGNORE=*
+#
+# https://stackoverflow.com/questions/102049/how-do-i-escape-the-wildcard-asterisk-character-in-bash
+# https://unix.stackexchange.com/questions/67757/wildcards-inside-quotes
+# https://wiki.bash-hackers.org/syntax/quoting
